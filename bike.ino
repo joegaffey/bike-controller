@@ -49,8 +49,6 @@ void loop() {
   // Read the analog value from the specified pin
   int analogValue = analogRead(analogPin);
 
-  // --- MODIFIED CODE ---
-
   // Define the target voltage range
   const float minVoltage = 1.6;
   const float maxVoltage = 2.4;
@@ -69,8 +67,6 @@ void loop() {
   // Map the analog value (0-1023) directly to the joystick's Rx-axis
   joystick.setRxAxis(joystickValue);
   
-  // --- END MODIFIED CODE ---
-
   // Wait a short period to prevent flooding the USB bus with data
   delay(10); 
 }
